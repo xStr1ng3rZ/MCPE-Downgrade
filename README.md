@@ -15,6 +15,6 @@ powershell -ExecutionPolicy Bypass -File "%USERPROFILE%\Downloads\downgrade-1.16
 ###  What if the installation fails and you need to restore your worlds manually?
 If the script gets interrupted or the Minecraft installation fails and your worlds are not restored automatically, you can easily recover them using Command Prompt (`cmd`) with the following command:
 ```cmd
-xcopy "%USERPROFILE%\Desktop\Minecraft_Backup\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState" "%LOCALAPPDATA%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState" /E /I /H /Y
+powershell -Command "Add-AppxPackage -Path '%USERPROFILE%\Downloads\Microsoft.Services.Store.Engagement_*.appx'"
 ```
 *(Make sure to completely close Minecraft before running the restoration command).*
